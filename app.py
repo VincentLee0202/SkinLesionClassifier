@@ -8,11 +8,10 @@ import pandas as pd
 import os 
 import cv2
  
-base_path = r'C:\Users\hpuser\Desktop\SkinLesionClassifierModel'
 model_path = r'skin_classifier_model.h5'
-model = load_model(os.path.join(base_path, model_path))
+model = load_model(model_path)
 scaler_path = r'scaler.pkl'
-scaler = pickle.load(open(os.path.join(base_path, scaler_path), 'rb'))
+scaler = pickle.load(open(scaler_path, 'rb'))
 icon = '⚕️'
 features = ['Age', 'Region', 'Itch', 'Grew', 'Pain', 'Changed', 'Bleed', 'Elevation']
 diagnosis = {
@@ -123,7 +122,6 @@ def app():
 
         # Prediction
         st.subheader('Prediction:')
-        st.write('*In a jiffy, thinking...*')
         pred_proba, prediction = make_prediction(model, input_x1, input_x2)
         proba = {
             'Class':['NEV', 'BCC', 'ACK', 'SEK', 'SCC', 'MEL'],
