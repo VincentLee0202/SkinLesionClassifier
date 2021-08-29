@@ -1,0 +1,8 @@
+streamlit 
+tensorflow 
+PIL
+plotly
+pickle 
+numpy
+pandas
+cv2 
