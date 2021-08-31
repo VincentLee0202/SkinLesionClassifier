@@ -133,6 +133,6 @@ def app():
         st.plotly_chart(fig)
         st.subheader('*{}* is most likely the diagnosis.'.format(diagnosis[prediction]))
 
-    st.markdown('<a href="{}">The overview of this neural network</a>'.format(report_link), unsafe_allow_html = True)
+    st.markdown('<a href="{}">The overview of this skin lesion classifier</a>'.format(report_link), unsafe_allow_html = True)
 
 app()
