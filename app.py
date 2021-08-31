@@ -134,6 +134,5 @@ def app():
         st.subheader('*{}* is most likely the diagnosis.'.format(diagnosis[prediction]))
 
     st.markdown('<a href="{}">The overview of this neural network</a>'.format(report_link), unsafe_allow_html = True)
-    st.markdown('<a href="https://github.com/VincentLee0202/SkinLesionClassifier.git">Github repository</a>', unsafe_allow_html = True)
 
 app()
