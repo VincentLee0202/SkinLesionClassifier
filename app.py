@@ -71,7 +71,7 @@ def user_input():
 
     st.sidebar.subheader('Input Features')
     image = st.sidebar.file_uploader('Upload the image over here:', type = ['png', 'jpg'])
-    st.markdown('Please ensure that the image covers only the skin and the lesion, if cannot, it is advisable to crop out the background.')
+    st.sidebar.markdown('Please ensure that the image covers only the skin and the lesion, if cannot, it is advisable to crop out the background.')
     age = st.sidebar.slider('How old is the patient?', 5.0, 120.0, 30.0)
     region = st.sidebar.selectbox('Where is the lesion found?', region_choice)
     itch = st.sidebar.selectbox('Did the patient feel itchiness?', map_choice)
